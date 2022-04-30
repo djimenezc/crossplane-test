@@ -1,3 +1,4 @@
+REG=my-package-repo
 
 provision-psql-gcp:
 	@kubectl apply -f k8s/postgres.yml
@@ -22,4 +23,7 @@ clean-up-pod:
 clean-up: clean-up-pod
 	kubectl delete postgresqlinstance my-db
 
-
+build-push-configuration:
+	cd crossplane-config && \
+	kubectl crossplane build configuration && \
+	kubectl crossplane push configuration $(REG)/getting-started-with-gcp:v1.7.0

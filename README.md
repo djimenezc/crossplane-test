@@ -15,3 +15,15 @@ Try the following command to watch your provisioned resources become ready:
 ```
     kubectl get crossplane -l crossplane.io/claim-name=my-db
 ```
+
+---
+
+https://crossplane.io/docs/v1.7/getting-started/create-configuration.html
+
+```
+    make build-push-configuration
+```
+
+## Packages
+
+https://crossplane.io/docs/v1.7/concepts/packages.html
