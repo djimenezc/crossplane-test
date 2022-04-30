@@ -8,7 +8,8 @@ spec:
   - name: see-db
     image: postgres:12
     command: ['psql']
-    args: ['-c', 'SELECT current_database();']
+    # args: ['-c', 'SELECT current_database();']
+    args: ['-c', 'SELECT datname FROM pg_database WHERE datistemplate = false;']
     env:
     - name: PGDATABASE
       value: postgres

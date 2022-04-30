@@ -16,8 +16,10 @@ get-postgres-secrets:
 deploy-pod:
 	kubectl apply -f k8s/container.yml
 
-clean-up:
+clean-up-pod:
 	kubectl delete pod see-db
+
+clean-up: clean-up-pod
 	kubectl delete postgresqlinstance my-db
 
 
