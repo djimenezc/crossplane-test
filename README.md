@@ -27,3 +27,16 @@ https://crossplane.io/docs/v1.7/getting-started/create-configuration.html
 ## Packages
 
 https://crossplane.io/docs/v1.7/concepts/packages.html
+
+
+--
+## Providers
+
+### GCP
+
+https://crossplane.io/docs/v1.7/cloud-providers/gcp/gcp-provider.html
+
+```shell
+    curl -O https://raw.githubusercontent.com/crossplane/crossplane/release-1.7/docs/snippets/configure/gcp/credentials.sh
+    ./credentials.sh
+```
